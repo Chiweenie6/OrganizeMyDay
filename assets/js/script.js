@@ -1,11 +1,3 @@
-// Current date and time
-// const currentDay = new Date().toDateString();
-// document.getElementById("currentDay").innerHTML = currentDay;
-
-// const currentTime = new Date().toLocaleTimeString();
-// document.getElementById("currentTime").innerHTML = currentTime;
-
-
 
 // Time and date using Day.js
 var theTime = dayjs().format("hh:mm:ss");
@@ -16,41 +8,63 @@ $("#currentDay").text(theDate);
 
 
 
+
+
+$(function() {
 // Changes the color on the time boxes depending on the current time.
-var timeBlock = document.getElementsByClassName("timeBlock");
-var timeHour = (new Date()).getHours();
-// $(".timeBlock").each(function() {
-//   var cTime = parseInt($(this).prop("id"));
-//   if(cTime < timeHour){
-//     $(this).css("background-color", "grey");
-//   } else if (cTime === timeHour) {
-//     $(this).css("background-color", "green");
-//   } else if (cTime > timeHour) {
-//     $(this).css("background-color", "lightblue");
+
+var timeNow = dayjs().format("H");
+console.log(timeNow);
+
+var timeNowString = timeNow.toString();
+console.log(timeNowString);
+
+console.log();
+
+
+
+// var timeID = $(".activity").parent().attr("id");
+var activity = $(".activity").parent().attr("id");
+
+console.log(timeID);
+
+
+var timeArray = $(".activity").parent().toArray();
+
+var timeID = [];
+$(".activity").parent().each(function() {
+  timeID.push(this.id);
+});
+
+var timeIDNum = timeID.map(function(x) {
+  return parseInt(x);
+});
+
+
+console.log(timeArray);
+console.log(timeID);
+console.log(timeIDNum);
+
+while (timeID.map == timeNow) {
+  $(".activity").addClass("present");
+}
+
+
+// console.log($(".activity").addClass("present"));
+
+
+
+// $(".activity").each(function() {
+//   // var cTime = $(".activity").parent();
+//   if (timeID < timeNow) {
+//     $(".activity").addClass("past");
 //   }
-// });
-console.log(timeHour);
-console.log(parseInt(document.querySelectorAll("#id")));
-console.log(timeBlock.classList);
+//   });
+});
 
 
 
 
-// $(".timeBlock").each(function() {
-//   var cTime = parseInt($(this).prop("id"));
-//   if (cTime < timeHour){
-//     timeBlock.classList.add("past");
-
-//   }
-// });
-
-
-//  function changingColor() {
-//   var timeBlock = document.querySelectorAll(".timeBlock");
-//   timeBlock.classList.add("past");
-//  };
-
-//  changingColor();
 
 
 
