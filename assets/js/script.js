@@ -1,16 +1,24 @@
 // Current date and time
-const currentDay = new Date().toDateString();
-document.getElementById("currentDay").innerHTML = currentDay;
+// const currentDay = new Date().toDateString();
+// document.getElementById("currentDay").innerHTML = currentDay;
 
-const currentTime = new Date().toLocaleTimeString();
-document.getElementById("currentTime").innerHTML = currentTime;
+// const currentTime = new Date().toLocaleTimeString();
+// document.getElementById("currentTime").innerHTML = currentTime;
 
+
+
+// Time and date using Day.js
+var theTime = dayjs().format("hh:mm:ss");
+$("#currentTime").text(theTime);
+
+var theDate = dayjs().format("MMMM DD, YYYY");
+$("#currentDay").text(theDate);
 
 
 
 // Changes the color on the time boxes depending on the current time.
-const timeBlock = document.getElementsByClassName("timeBlock");
-const timeHour = (new Date()).getHours();
+var timeBlock = document.getElementsByClassName("timeBlock");
+var timeHour = (new Date()).getHours();
 // $(".timeBlock").each(function() {
 //   var cTime = parseInt($(this).prop("id"));
 //   if(cTime < timeHour){
@@ -21,7 +29,7 @@ const timeHour = (new Date()).getHours();
 //     $(this).css("background-color", "lightblue");
 //   }
 // });
- console.log(timeHour);
+console.log(timeHour);
 console.log(parseInt(document.querySelectorAll("#id")));
 console.log(timeBlock.classList);
 
