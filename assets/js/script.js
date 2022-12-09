@@ -15,12 +15,12 @@ var timeNow = dayjs().format("H");
 
 $(".timeBlock").each(function () {
   var timeBlockID = parseInt($(this).attr("id"));
-  // console.log(timeBlockID);
-  if (timeBlockID > timeNow) {
+// console.log(timeBlockID);
+  if (timeBlockID < timeNow) {
     $(this).addClass("past");
   } else if (timeBlockID == timeNow) {
     $(this).addClass("present");
-  } else if (timeBlockID < timeNow) {
+  } else if (timeBlockID > timeNow) {
     $(this).addClass("future");
   }
 });
@@ -30,9 +30,16 @@ $(".timeBlock").each(function () {
 // function to store information locally using the save button
 $("button").click(function(){
 
+  var activity = $(".activity");
+
+  localStorage.setItem()
+  
+
 });
 
 
+
+localStorage.getItem();
 
 
 
