@@ -25,21 +25,45 @@ $(".timeBlock").each(function () {
   }
 });
 
+var storeInfoBtn = $(".storeInfoBtn");
+$(function() {
+  
+})
+
+
+console.log($(this).children());
+console.log($(this).children("button"));
+console.log($(this).children("textarea"));
 
 
 // function to store information locally using the save button
-$("button").click(function(){
+$(".storeInfoBtn").click(function(){
 
-  var activity = $(".activity");
+  var textAreaText = localStorage.getItem("textArea");
 
-  localStorage.setItem()
+  var timeBlock = $(this).attr("id");
+  var textArea = timeBlock.children("textarea");
+  textArea.textContent = textAreaText;
+
+  console.log($(this).attr("id").children());
+
+  console.log($("textarea").text("hello " + textArea));
+
+
+  console.log(timeBlock);
+  console.log(textArea);
+  console.log(textAreaText);
+
+
+
+  localStorage.setItem("textArea", textAreaText);
   
 
 });
 
 
 
-localStorage.getItem();
+// localStorage.getItem();
 
 
 
