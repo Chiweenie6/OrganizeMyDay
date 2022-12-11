@@ -31,24 +31,76 @@ $(".timeBlock").each(function () {
 
 
 
+
+
+var myStuff = {};
+
+var orderMyStuff = $(function() {
+  var gatherMyStuff = JSON.parse(localStorage.getItem("savetron"));
+});
+
+
+
 $(".storeInfoBtn").click(function() {
+
+  
+
+  var textToDo = $(this).parent().val();
+  
+
+  console.log(textToDo);
+
+
+
 
   var savetron = $(".storeInfoBtn").index(this);
 
   console.log(savetron);
 
-  myStuffToDo[savetron] = $(".activity").text();
+  myStuff[savetron] = $(this).parent().children(".activity").val();
 
-  console.log($(".activity").val());
+  console.log(myStuff);
 
-  localStorage.setItem("myStuffToDo", JSON.stringify(myStuffToDo));
+  localStorage.setItem("myStuff", JSON.stringify(myStuff));
 })
 
-var myStuffToDo = {};
 
-var orderMyStuffToDo = function() {
-  gatherMyStuffToDo = JSON.parse(localStorage.getItem("savetron"));
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $(".storeInfoBtn").click(function() {
+
+//   var savetron = $(".storeInfoBtn").index(this);
+
+//   console.log(savetron);
+
+//   myStuff[savetron] = $(".activity").text();
+
+//   console.log(myStuff);
+
+//   localStorage.setItem("myStuff", JSON.stringify(myStuff));
+// })
+
+// var myStuff = {};
+
+// var orderMyStuff = $(function() {
+//   var gatherMyStuff = JSON.parse(localStorage.getItem("savetron"));
+// });
 
 
 
