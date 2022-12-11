@@ -25,45 +25,65 @@ $(".timeBlock").each(function () {
   }
 });
 
-var storeInfoBtn = $(".storeInfoBtn");
-$(function() {
-  
+
+
+
+
+
+
+$(".storeInfoBtn").click(function() {
+
+  var savetron = $(".storeInfoBtn").index(this);
+
+  console.log(savetron);
+
+  myStuffToDo[savetron] = $(".activity").text();
+
+  console.log($(".activity").val());
+
+  localStorage.setItem("myStuffToDo", JSON.stringify(myStuffToDo));
 })
 
+var myStuffToDo = {};
 
-console.log($(this).children());
-console.log($(this).children("button"));
-console.log($(this).children("textarea"));
+var orderMyStuffToDo = function() {
+  gatherMyStuffToDo = JSON.parse(localStorage.getItem("savetron"));
+}
+
+
+
 
 
 // function to store information locally using the save button
-$(".storeInfoBtn").click(function(){
+// $(".storeInfoBtn").click(function(){
+//   $(this).each(function() {
+    
 
-  var textAreaText = localStorage.getItem("textArea");
-
-  var timeBlock = $(this).attr("id");
-  var textArea = timeBlock.children("textarea");
-  textArea.textContent = textAreaText;
-
-  console.log($(this).attr("id").children());
-
-  console.log($("textarea").text("hello " + textArea));
-
-
-  console.log(timeBlock);
-  console.log(textArea);
-  console.log(textAreaText);
-
-
-
-  localStorage.setItem("textArea", textAreaText);
+//     var textyTex = $(".activity").val();
+   
   
+//     console.log(textyTex);
+  
+    
+//     // console.log();
+  
+//     localStorage.setItem("todo", textyTex);
 
-});
+//   });
+// });
+
+ 
+
+// var textyTexTex = $(".activity");
+
+
+//  var getInfo = localStorage.getItem("todo");
+//  textyTexTex.val() = textyTexTex;
 
 
 
-// localStorage.getItem();
+
+
 
 
 
