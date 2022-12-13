@@ -6,7 +6,8 @@ Daily work day organizer.
 ## Description
 This program creates a daily organization planner that the user can insert daily tasks or activities into. The tasks will be organized by time. The daily time and date will be displayed. Time blocks will change color depending if that task(s) time slot is past, present or future from the current time being displayed. The user can save activities into the local storage so that the information is not lost.
 
-The deployed URL - 
+The deployed URL - https://chiweenie6.github.io/OrganizeMyDay/
+
 
 
 ## Installation
