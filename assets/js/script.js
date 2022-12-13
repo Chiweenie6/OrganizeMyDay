@@ -31,52 +31,61 @@ $(".timeBlock").each(function () {
 
 
 
+// orderMyStuff();
 
 
-var myStuff = {};
 
-var orderMyStuff = $(function() {
-  var gatherMyStuff = JSON.parse(localStorage.getItem("savetron"));
+$(".storeInfoBtn").each(function () {
+  
+
+var orderMyStuff = JSON.parse(localStorage.getItem("myStuff"));
+
+  if (orderMyStuff !== null) {
+    document.querySelector(".activity").innerHTML = Object.values(orderMyStuff);
+  } 
+  
+
+  console.log(orderMyStuff);
 });
 
 
 
+// $ (function init() {
+//   letsOrderMyStuff();
+
+// })
+
+
+
+// gatherMyStuff.load(orderMyStuff);
+
+
+var gatherMyStuff = JSON.parse(localStorage.getItem("myStuff"));
+// console.log(gatherMyStuff);
+
+
+
+
+
+
+// Allows the information the user enters to be saved locally. Each textarea paired with the parent ID.
+
+var myStuff = {};
+
 $(".storeInfoBtn").click(function() {
-
-  
-
-  var textToDo = $(this).parent().val();
-  
-
-  console.log(textToDo);
-
-
-
 
   var savetron = $(".storeInfoBtn").index(this);
 
-  console.log(savetron);
+  // console.log(savetron);
 
   myStuff[savetron] = $(this).parent().children(".activity").val();
 
-  console.log(myStuff);
+  // console.log(myStuff);
 
   localStorage.setItem("myStuff", JSON.stringify(myStuff));
-})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 
 
@@ -101,43 +110,6 @@ $(".storeInfoBtn").click(function() {
 // var orderMyStuff = $(function() {
 //   var gatherMyStuff = JSON.parse(localStorage.getItem("savetron"));
 // });
-
-
-
-
-
-// function to store information locally using the save button
-// $(".storeInfoBtn").click(function(){
-//   $(this).each(function() {
-    
-
-//     var textyTex = $(".activity").val();
-   
-  
-//     console.log(textyTex);
-  
-    
-//     // console.log();
-  
-//     localStorage.setItem("todo", textyTex);
-
-//   });
-// });
-
- 
-
-// var textyTexTex = $(".activity");
-
-
-//  var getInfo = localStorage.getItem("todo");
-//  textyTexTex.val() = textyTexTex;
-
-
-
-
-
-
-
 
 
 
@@ -172,70 +144,3 @@ $(function () {
     //
     // TODO: Add code to display the current date in the header of the page.
   });})
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // var timeID = $(".activity").parent().attr("id");
-// var activity = $(".activity").parent().attr("id");
-
-// console.log(timeID);
-
-
-// var timeArray = $(".activity").parent().toArray();
-
-// var timeID = [];
-// $(".activity").parent().each(function() {
-//   timeID.push(this.id);
-// });
-
-// var timeIDNum = timeID.map(function(x) {
-//   return parseInt(x);
-// });
-
-
-
-  // var idArray = [];
-// $(this).attr("id");
-
-
-
-// console.log($(".timeHolder").children());
-
-// var timeSpace = $(".timeHolder").children().attr("id");
-
-// $(".timeHolder").each(Function() {
-  
-
-// })
-
-// var timeBlock = $(".timeBlock").attr("id");
-// console.log(timeBlock);
-
-
-// var timeBlockID = [];
-// $(".timeBlock").each(function() {
-//   timeBlockID.push(this.id);
-//   console.log(timeBlockID);
-// });
-
-
-
-// var timeBlockID = [];
-// $(".timeBlock").each(function() {
-//   timeBlockID.push($(this).attr("id"));
-//   console.log(timeBlockID);
-// });
-// console.log(timeBlock);
-
-
-// var theHour = parseInt($(this).attr("id"));
