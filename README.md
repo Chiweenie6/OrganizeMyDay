@@ -16,7 +16,10 @@ N/A
 ## Usage
 To organize one's day. Scheduling activities, tasks and responsibilites. A well made schedule means you will have a greater chance of completing all of your daily todos.
 
-Image:
+Image:![image](https://user-images.githubusercontent.com/113393706/207200867-6762abed-8ee7-4a1e-a5da-cf84a50aa36a.png)
+
+Image:![image](https://user-images.githubusercontent.com/113393706/207200927-747e02b9-b3b4-431f-859c-5a0513fd4a77.png)
+
 
 
 ## Credits
